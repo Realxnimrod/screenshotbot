@@ -51,7 +51,7 @@ def get_mention_id(mention):
 
 
 def reply_mentions():
-    bot_name = "_screenshoter"
+    bot_name = "narutoxzn"
     count = 2
     reply_1 = "Your screenshot can be found below😁!\n\nRemember your commands:\n 'All' command gets all the tweets above the tweet you commented on in the thread.\n\n 'light' and 'dark' commands returns your screenshot in light mode⬜ and dark mode⬛"
     reply_2="Your screenshot can be found below 😁!\n\n🤩Want to get your screenshot without using the bot? Visit : screenshoter.live ."
