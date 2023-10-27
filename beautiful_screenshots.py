@@ -17,7 +17,7 @@ from utils import (
 
 
 
-my_username = "@_screenshoter"
+my_username = "@narutoxzn"
 
 
 def clean_text(text):
