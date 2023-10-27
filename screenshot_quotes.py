@@ -24,7 +24,7 @@ verified_dark = verified_dark.convert("RGB")
 verified_dark = verified_dark.resize((45, 45))
 
 
-my_username = "@_screenshoter"
+my_username = "@narutoxzn"
 
 
 def clean_text(text):
