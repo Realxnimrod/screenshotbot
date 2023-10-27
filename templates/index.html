@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome API -->
+  <link rel="icon" href="{{url_for("static",filename="bot-head.png")}}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{url_for("static",filename="index.css")}}">
+  <link rel="icon" href="{{url_for("static",filename="tab-icon.png")}}">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5477716017803450"
+     crossorigin="anonymous"></script>
+  <title>Tweets Screenshoter app</title>
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <div class="burger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="logo">
+      <img src="{{url_for("static",filename="bot-head.png")}}" alt="bot-head image">
+      <a href="">
+        <h1>Tweets Screenshoter </h1>
+      </a>
+    </div>
+    <div class="nav-btn">
+      <a href="https://twitter.com/_screenshoter" target="_blank">Try It</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>
+      Paste the link to the tweet below
+    </h1>
+    <form method="post">
+      <label for="link">Link</label>
+      <input type="text" id="link" name="link" placeholder="paste the link to the tweet here!" required>
+      <br> <br>
+      <label for="Tweet or thread">Tweet or thread?</label>
+      <select name="type" id="type">
+        <option value="tweet">Tweet</option>
+        <option value="thread" selected>Thread</option>
+      </select>
+        <i class="fa fa-chevron-down" ></i>
+      <br> <br>
+
+      <label for="Color">Color</label>
+      <select name="color" id="color">
+        <option value="light">Light mode</option>
+        <option value="dark">Dark</option>
+        <option value="colorful" selected>Colorful</option>
+      </select>
+      <i class="fa fa-chevron-down" ></i>
+
+    <br> <br>
+    <abbr title="download">
+     <button class="download-btn" type="submit">
+      <a href="/download">
+        <i class="fa-solid fa-download">download</i>
+      </a>
+     </button>
+    </abbr> 
+    </form>
+
+{% if files %}
+<script>
+    var urls = []
+    {% for file in files %}
+    urls.push("{{ url_for('files_download', filename=file) }}")
+    {% endfor %}
+    urls.forEach(url => {
+        var iframe = document.createElement('iframe'); iframe.style.visibility = 'collapse';
+        iframe.style.visibility = 'collapse';
+        iframe.src = url;
+        document.body.append(iframe);
+        setTimeout(() => iframe.remove(), 2000);
+    });
+</script>
+{% endif %}
+
+    <section class="how-to-use">
+      <h1>How to Use.</h1>
+      <p>Paste the link to the <b>tweet</b> you intend to screenshot here if you intend to screenshot a tweet, or paste the link to
+        the <b>last tweet</b> in a thread if you intend to screenshot a <b>thread.</b>Ensure you paste the original link to the tweet for example: 
+        <b>https://twitter.com/_screenshoter<br>/status/1540308306807455745</b></p>.
+      
+    </section>
+
+  </header>
+  
+  <footer>
+    <a href="https://twitter.com/_screenshoter" target="_blank">
+      <h1>
+        <span><i class="fa-brands fa-twitter"></i> @_screenshoter</span>
+      </h1>
+    </a>
+
+  </footer>
+</body>
+
+</html>
