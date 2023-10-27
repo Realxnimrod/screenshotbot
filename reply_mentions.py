@@ -1,6 +1,5 @@
 import os
 import random
-from os import environ
 from numpy import full
 from tweepy import API, Client, OAuth1UserHandler
 from screenshot_tweet import create_tweet_screenshot_light, create_tweet_screenshot_dark
@@ -54,16 +53,16 @@ def reply_mentions():
     bot_name = "narutoxzn"
     count = 2
     reply_1 = "Your screenshot can be found below😁!\n\nRemember your commands:\n 'All' command gets all the tweets above the tweet you commented on in the thread.\n\n 'light' and 'dark' commands returns your screenshot in light mode⬜ and dark mode⬛"
-    reply_2="Your screenshot can be found below 😁!\n\n🤩Want to get your screenshot without using the bot? Visit : screenshoter.live ."
+    reply_2="Your screenshot can be found below 😁!"
     reply=random.choice([reply_1,reply_2])
-    #reply = "Your screenshot can be found below😁!\n\nAd: Everyone will run after this if they knew how good this was.\nThis?🤔\nYea, what I'm about to tell you😎👇\nGet Free daily trade Calls on Cryptos and NFts with Giveaways here http://t.me/tradewithwealth"
-    #reply="Your screenshot can be found below 😁!\n\n🤩Ad: MyCowrie is the 1st crypto to launch with a moneyback guarantee & by a legal team. Join their group to buy some before the next pump & CEX Listing: https://t.co/BeDkx0bNES"
+    #reply = "Your screenshot can be found below😁!"
+    #reply="Your screenshot can be found below 😁!"
 
 
 
 
     #reply=random.choice([reply_1,reply_2])
-    #reply="Your screenshot can be found below😁!\nAd: HOW OTHER NIGERIANS ARE EARNING IN DOLLARS, BY JUST UPLOADING BOOKS ON AMAZON\n~Even ithout a writing skill or you've not written  a book before\nJOIN CLASS FOR FREE CLICK HERE👇\nhttps://t.co/V2HCK9S5kj\nlink expires soon"
+    #reply="Your screenshot can be found below😁!"
     mentions = api.mentions_timeline(
         count=count, include_entities=True, tweet_mode="extended"
     )
