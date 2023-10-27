@@ -1,5 +1,6 @@
 import os
 import random
+from os import environ
 from numpy import full
 from tweepy import API, Client, OAuth1UserHandler
 from screenshot_tweet import create_tweet_screenshot_light, create_tweet_screenshot_dark
